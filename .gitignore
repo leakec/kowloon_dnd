@@ -1,1 +1,6 @@
 notes/.obsidian
+**/yarn.lock
+**/package.json
+**/dist/main.js
+**/dist/main.js.LICENSE.txt
+**/node_modules
