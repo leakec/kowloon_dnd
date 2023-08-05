@@ -1,7 +1,7 @@
-
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const loader = new GLTFLoader();
 
 // Create renderer
 var renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -38,8 +38,8 @@ loader.load(
 	// called when the resource is loaded
 	function ( gltf ) {
 
-		//scene.add( gltf.scene );
-		scene.add( gltf.asset );
+		scene.add( gltf.scene );
+		//scene.add( gltf.asset );
 
 		gltf.animations; // Array<THREE.AnimationClip>
 		gltf.scene; // THREE.Group
