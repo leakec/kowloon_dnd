@@ -36,6 +36,12 @@ export class MyGui extends GUI {
     /** Controls the z clipping plane. */
     plane_slider_z: GUIController;
 
+    /** Controls the transparency of the clipped city. */
+    transparency_slider: GUIController;
+
+    /** Objects to modify the transparency of with the slider. */
+    transparent_objs: THREE.Group;
+
     constructor() {
         super(...arguments);
     }
@@ -45,7 +51,7 @@ export class MyGui extends GUI {
      * @param plane_y clip_plane Clipping plane in y.
      * @param plane_z clip_plane Clipping plane in z.
      */
-    addPlaneControls(plane_x: clip_plane, plane_y: clip_plane, plane_z: clip_plane) {
+    add_plane_controls(plane_x: clip_plane, plane_y: clip_plane, plane_z: clip_plane) {
         this.plane_x = plane_x;
         this.plane_y = plane_y;
         this.plane_z = plane_z;
@@ -66,6 +72,16 @@ export class MyGui extends GUI {
         this.plane_controls.open();
     }
 
+    add_transparency_control(objs: THREE.Group)
+    {
+        this.transparency_slider = this.plane_controls.add({transparency: 0.1}, "transparency", 0.0, 1.0);
+        this.transparent_objs = objs;
+
+        var func = this.update_transparency_slider.bind(this);
+        this.transparency_slider.onChange(func);
+    }
+
+
     /** Update the clipping plane_x constant.
      * @param slider_value {number} New clipping plane constant.
      */
@@ -85,5 +101,13 @@ export class MyGui extends GUI {
      */
     update_plane_slider_z(slider_value: number) {
         this.plane_z.plane.constant = this.plane_z.low + slider_value*(this.plane_z.high-this.plane_z.low);
+    }
+
+    update_transparency_slider(slider_value: number) {
+        this.transparent_objs.traverse((o) => {       
+            if ((o as THREE.Mesh).isMesh) {
+                ((o as THREE.Mesh).material as THREE.Material).opacity = slider_value;
+            }
+        });
     }
 }

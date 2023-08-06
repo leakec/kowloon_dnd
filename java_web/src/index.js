@@ -37,12 +37,20 @@ var l2_light = new THREE.DirectionalLight(16777215);
 scene.add(l2_light);
 l2_light.position.set(-3,10,-10);
 
-// Add objects
-
+// Add objects and GUI
 renderer.localClippingEnabled = true;
 var local_plane_x = new THREE.Plane( new THREE.Vector3( -1.0, 0.0, 0.0 ), 256.98 );
 var local_plane_y = new THREE.Plane( new THREE.Vector3( 0.0, -1.0, 0.0 ), 52.54 );
 var local_plane_z = new THREE.Plane( new THREE.Vector3( 0.0, 0.0, 1.0 ), 176.66 );
+
+// GUI
+const gui = new MyGui();
+gui.add_plane_controls(
+    {plane: local_plane_x, low: -6.79, high: 256.98},
+    {plane: local_plane_y, low: 2.85, high: 52.54},
+    {plane: local_plane_z, low: -10.71, high: 176.66},
+);
+
 
 loader.load(
 	// resource URL
@@ -93,6 +101,8 @@ loader.load(
             }
         });
 
+        gui.add_transparency_control(gltf.scene);
+
 	},
 	// called while loading is progressing
 	function ( xhr ) {
@@ -106,14 +116,6 @@ loader.load(
 		console.log( 'An error happened' );
 
 	}
-);
-
-// Add GUI
-const gui = new MyGui();
-gui.addPlaneControls(
-    {plane: local_plane_x, low: -6.79, high: 256.98},
-    {plane: local_plane_y, low: 2.85, high: 52.54},
-    {plane: local_plane_z, low: -10.71, high: 176.66},
 );
 
 // Render Loop
