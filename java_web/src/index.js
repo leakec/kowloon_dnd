@@ -79,9 +79,42 @@ loader.load(
 	}
 );
 
+// Load a version, but add an alpha to the material
+loader.load(
+	'KowloonCityMesh.glb',
+	function ( gltf ) {
+
+		scene.add( gltf.scene );
+
+        gltf.scene.traverse((o) => {       
+            if (o.isMesh) {
+                o.material.opacity = 0.1;
+                o.material.transparent = true;
+            }
+        });
+
+	},
+	// called while loading is progressing
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+
 // Add GUI
 const gui = new MyGui();
-gui.addPlaneControls(local_plane_x, local_plane_y, local_plane_z);
+gui.addPlaneControls(
+    {plane: local_plane_x, low: -6.79, high: 256.98},
+    {plane: local_plane_y, low: 2.85, high: 52.54},
+    {plane: local_plane_z, low: -10.71, high: 176.66},
+);
 
 // Render Loop
 var render = function () {
