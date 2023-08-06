@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MyGui } from './my_gui.js';
 const loader = new GLTFLoader();
 
 // Create renderer
@@ -24,9 +25,9 @@ camera_per.position.z = 200;
 
 // Create controls
 const controls = new OrbitControls(camera_per, renderer.domElement);
-controls.target.x = 0.0;
-controls.target.y = 0.0; 
-controls.target.z = 0.0; 
+controls.target.x = 5.0;
+controls.target.y = 5.0; 
+controls.target.z = 5.0; 
 
 // Create lights
 var l1_light = new THREE.HemisphereLight(16777215,4473924);
@@ -39,7 +40,9 @@ l2_light.position.set(-3,10,-10);
 // Add objects
 
 renderer.localClippingEnabled = true;
-var localPlane = new THREE.Plane( new THREE.Vector3( 100, -1, 0 ), 100 );
+var local_plane_x = new THREE.Plane( new THREE.Vector3( -1.0, 0.0, 0.0 ), 256.98 );
+var local_plane_y = new THREE.Plane( new THREE.Vector3( 0.0, -1.0, 0.0 ), 52.54 );
+var local_plane_z = new THREE.Plane( new THREE.Vector3( 0.0, 0.0, 1.0 ), 176.66 );
 
 loader.load(
 	// resource URL
@@ -57,7 +60,7 @@ loader.load(
 
         gltf.scene.traverse((o) => {       
             if (o.isMesh) {
-              o.material.clippingPlanes = [localPlane];
+              o.material.clippingPlanes = [local_plane_x, local_plane_y, local_plane_z];
             }
         });
 
@@ -75,6 +78,10 @@ loader.load(
 
 	}
 );
+
+// Add GUI
+const gui = new MyGui();
+gui.addPlaneControls(local_plane_x, local_plane_y, local_plane_z);
 
 // Render Loop
 var render = function () {
