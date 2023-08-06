@@ -1,16 +1,51 @@
 import * as THREE from "three";
-import { GUI } from "dat.gui";
+import { GUI, GUIController } from "dat.gui";
+
+export type clip_plane = {
+
+    /** THREE plane. */
+    plane: THREE.Plane,
+
+    /** Lower bound for clipping. */
+    low: number,
+
+    /** Upper bound for clipping. */
+    high: number
+}
+
 export class MyGui extends GUI {
+
+    /** Clipping plane in x. */
+    plane_x: clip_plane;
+
+    /** Clipping plane in y. */
+    plane_y: clip_plane;
+
+    /** Clipping plane in z. */
+    plane_z: clip_plane;
+
+    /** This is the folder that controls the clipping planes. */
+    plane_controls: GUI;
+
+    /** Controls the x clipping plane. */
+    plane_slider_x: GUIController;
+
+    /** Controls the y clipping plane. */
+    plane_slider_y: GUIController;
+
+    /** Controls the z clipping plane. */
+    plane_slider_z: GUIController;
+
     constructor() {
         super(...arguments);
     }
 
     /** This method adds the clipping plane controls.
-     * @param plane_x {plane: THREE.Plane, low: Number, high: Number} Clipping plane in x.
-     * @param plane_y {plane: THREE.Plane, low: Number, high: Number} Clipping plane in y.
-     * @param plane_z {plane: THREE.Plane, low: Number, high: Number} Clipping plane in z.
+     * @param plane_x clip_plane Clipping plane in x.
+     * @param plane_y clip_plane Clipping plane in y.
+     * @param plane_z clip_plane Clipping plane in z.
      */
-    addPlaneControls(plane_x, plane_y, plane_z) {
+    addPlaneControls(plane_x: clip_plane, plane_y: clip_plane, plane_z: clip_plane) {
         this.plane_x = plane_x;
         this.plane_y = plane_y;
         this.plane_z = plane_z;
@@ -32,23 +67,23 @@ export class MyGui extends GUI {
     }
 
     /** Update the clipping plane_x constant.
-     * @param slider_value {Number} New clipping plane constant.
+     * @param slider_value {number} New clipping plane constant.
      */
-    update_plane_slider_x(slider_value) {
+    update_plane_slider_x(slider_value: number) {
         this.plane_x.plane.constant = this.plane_x.low + slider_value*(this.plane_x.high-this.plane_x.low);
     }
 
     /** Update the clipping plane_y constant.
-     * @param slider_value {Number} New clipping plane constant.
+     * @param slider_value {number} New clipping plane constant.
      */
-    update_plane_slider_y(slider_value) {
+    update_plane_slider_y(slider_value: number) {
         this.plane_y.plane.constant = this.plane_y.low + slider_value*(this.plane_y.high-this.plane_y.low);
     }
 
     /** Update the clipping plane_z constant.
-     * @param slider_value {Number} New clipping plane constant.
+     * @param slider_value {number} New clipping plane constant.
      */
-    update_plane_slider_z(slider_value) {
+    update_plane_slider_z(slider_value: number) {
         this.plane_z.plane.constant = this.plane_z.low + slider_value*(this.plane_z.high-this.plane_z.low);
     }
 }
