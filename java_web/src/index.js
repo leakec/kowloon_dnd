@@ -30,12 +30,12 @@ controls.target.y = 5.0;
 controls.target.z = 5.0; 
 
 // Create lights
-var l1_light = new THREE.HemisphereLight(16777215,4473924);
-scene.add(l1_light);
-l1_light.position.set(0,20,0);
-var l2_light = new THREE.DirectionalLight(16777215);
-scene.add(l2_light);
-l2_light.position.set(-3,10,-10);
+//var l1_light = new THREE.HemisphereLight(16777215,4473924);
+//scene.add(l1_light);
+//l1_light.position.set(0,20,0);
+//var l2_light = new THREE.DirectionalLight(16777215);
+//scene.add(l2_light);
+//l2_light.position.set(-3,10,-10);
 
 // Add objects and GUI
 renderer.localClippingEnabled = true;
@@ -54,7 +54,7 @@ gui.add_plane_controls(
 
 loader.load(
 	// resource URL
-	'KowloonCityMesh.glb',
+	'KowloonCityScene.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
 
