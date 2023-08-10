@@ -1,6 +1,7 @@
 ---
 tag: place, todo
 ---
+* Pronounced loo·si·fr·uhn
 * Initial place where all the characters meet.
 * Club with classic dark, cyberpunk music.
 * Players meet the [[Ringleader]] here, where get their [first task](First_task).
