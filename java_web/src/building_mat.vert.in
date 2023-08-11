@@ -1,7 +1,15 @@
 uniform float time;
 varying vec2 vUv;
+#include <clipping_planes_pars_vertex>
+
+// Clipping planes
+varying vec3 vViewPosition;
 
 void main() {
-    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    #include <begin_vertex>
+
     vUv = uv;
+
+    #include <project_vertex>
+    #include <clipping_planes_vertex>
 }

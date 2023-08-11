@@ -3,6 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MyGui } from './my_gui.js';
 const loader = new GLTFLoader();
+const FileLoader = new THREE.FileLoader();
 
 // Create renderer
 var renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -29,6 +30,10 @@ controls.target.x = 5.0;
 controls.target.y = 5.0; 
 controls.target.z = 5.0; 
 
+// Create clock
+const clock = new THREE.Clock();
+clock.start();
+
 // Create lights
 //var l1_light = new THREE.HemisphereLight(16777215,4473924);
 //scene.add(l1_light);
@@ -51,6 +56,17 @@ gui.add_plane_controls(
     {plane: local_plane_z, low: -10.71, high: 176.66},
 );
 
+const vert = await FileLoader.loadAsync("building_mat.vert");
+const frag = await FileLoader.loadAsync("building_mat.frag");
+
+const building_material = new THREE.ShaderMaterial({
+    uniforms: {
+        time: {value: 0.0},
+        resolution: {value: new THREE.Vector2()}
+    },
+    vertexShader: vert,
+    fragmentShader: frag,
+})
 
 loader.load(
 	// resource URL
@@ -68,7 +84,9 @@ loader.load(
 
         gltf.scene.traverse((o) => {       
             if (o.isMesh) {
+              o.material = building_material;
               o.material.clippingPlanes = [local_plane_x, local_plane_y, local_plane_z];
+              o.material.clipping = true;
             }
         });
 
@@ -123,6 +141,7 @@ var render = function () {
     // Render scene
     requestAnimationFrame(render);
     renderer.render(scene, camera_per);
+    building_material.uniforms.time.value = clock.getElapsedTime();
 };
 
 controls.update();
