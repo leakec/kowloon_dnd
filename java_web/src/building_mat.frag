@@ -10,6 +10,9 @@
 
 #define rnd(p) fract(sin(dot(p, vec2(12.9898,78.233))) * 43758.5453123)
 
+uniform float time;
+varying vec2 vUv;
+
 void color( out vec4 c, float rn)
 {
     vec4[5] colors;
