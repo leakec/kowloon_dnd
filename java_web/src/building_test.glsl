@@ -1,27 +1,41 @@
 // extracted and refactored from skaplun 3D "Megapolis" https://shadertoy.com/view/MlKBWD
 
-#define TIME_MULT   .5
-#define IDLE_TIME   0.0
-#define ON_TIME     0.7
-#define NUM_COLS    7.0
-#define WINDOW_SIZE 0.2
+#define NUM_COLS    15.0
+#define NUM_ROWS    15.0
+#define PERCENT_ON  0.7
+#define TIME_MULT   0.02
 
-// rnd(p) fract(sin(dot(p, vec2(12.9898,78.233))) * 43758.5453123)
+#define WINDOW_SIZE 0.5
+#define ON_TIME PERCENT_ON
+
 #define rnd(p) fract(sin(dot(p, vec2(12.9898,78.233))) * 43758.5453123)
 
-void mainImage( out vec4 O, vec2 U ){
-    vec2 R  = iResolution.xy;
-    float p = NUM_COLS/R.y;
-    U *= p;
-	O-=O; 
-    
-    float t = fract(iTime * TIME_MULT);
-    float mt = ceil(iTime * TIME_MULT);
-    float cellStartTime = rnd(ceil(U) * mt) * .5 + IDLE_TIME;
+void color( out vec4 c, float rn)
+{
+    vec4[5] colors;
+    colors[0] = vec4(0.0, 1.0, 0.6235294117647059, 1.0);
+    colors[1] = vec4(0.0, 0.7215686274509804, 1.0, 1.0);
+    colors[2] = vec4(0.0, 0.11764705882352941, 1.0, 1.0);
+    colors[3] = vec4(0.7411764705882353, 0.0, 1.0, 1.0);
+    colors[4] = vec4(0.8392156862745098, 0.0, 1.0, 1.0);
+    c = colors[int(rn*5.0)];
+}
 
-    if ((t > cellStartTime) && (t < cellStartTime + ON_TIME))
+void mainImage( out vec4 O, vec2 U ){
+    vec2 dark = vec2(NUM_ROWS/iResolution.x, NUM_COLS/iResolution.y);
+    U *= dark;
+    float rn = rnd(ceil(U));
+    float time_slide = iTime + rn*NUM_COLS*NUM_ROWS;
+    
+    
+    float t = fract(time_slide * TIME_MULT);
+
+    if (t < ON_TIME)
     {
-        U = smoothstep(p,0.,abs(fract(U)-.5) - WINDOW_SIZE/2. );
-        O += U.x*U.y;
+        vec2 on = abs(fract(U)-.5) - WINDOW_SIZE/2.;
+        if ((on.x < 0.0) && (on.y < 0.0))
+        {
+            color(O, rn);
+        }
     }
  }
