@@ -11,7 +11,9 @@
 #define rnd(p) fract(sin(dot(p, vec2(12.9898,78.233))) * 43758.5453123)
 
 uniform float time;
+uniform vec2 resolution;
 varying vec2 vUv;
+
 
 void color( out vec4 c, float rn)
 {
@@ -24,11 +26,11 @@ void color( out vec4 c, float rn)
     c = colors[int(rn*5.0)];
 }
 
-void mainImage( out vec4 O, vec2 U ){
-    vec2 dark = vec2(NUM_ROWS/iResolution.x, NUM_COLS/iResolution.y);
+void main(){
+    vec2 dark = vec2(NUM_ROWS/resolution.x, NUM_COLS/resolution.y);
     U *= dark;
     float rn = rnd(ceil(U));
-    float time_slide = iTime + rn*NUM_COLS*NUM_ROWS;
+    float time_slide = time + rn*NUM_COLS*NUM_ROWS;
     
     
     float t = fract(time_slide * TIME_MULT);
@@ -38,7 +40,11 @@ void mainImage( out vec4 O, vec2 U ){
         vec2 on = abs(fract(U)-.5) - WINDOW_SIZE/2.;
         if ((on.x < 0.0) && (on.y < 0.0))
         {
-            color(O, rn);
+            fragColor = color(O, rn);
+        }
+        else
+        {
+            fragColor = vec4(0.0, 0.0, 0.0, 1.0);
         }
     }
  }
