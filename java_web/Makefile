@@ -14,9 +14,9 @@ $(SRC_JS_FILES): $(SRC_TS_FILES) node_modules
 	yarn tsc -t es6 src/*.ts
 dist/main.js: $(SRC_JS_FILES_ALL) $(GLSL_FILES)
 	yarn webpack
-%.vert: %.vert.in
+%.vert: %.vert.in node_modules
 	node_modules/glslify/bin.js $< -o $@
-%.frag: %.frag.in
+%.frag: %.frag.in node_modules
 	node_modules/glslify/bin.js $< -o $@
 all: dist/main.js
 	cd dist; http-server

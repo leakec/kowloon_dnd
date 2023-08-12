@@ -35,7 +35,6 @@ void main(){
     float rn = rnd(ceil(U));
     float time_slide = time + rn*NUM_COLS*NUM_ROWS;
     
-    
     float t = fract(time_slide * TIME_MULT);
 
     if (t < ON_TIME)
@@ -49,5 +48,9 @@ void main(){
         {
             gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
         }
+    }
+    else
+    {
+        gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
     }
  }

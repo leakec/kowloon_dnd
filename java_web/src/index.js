@@ -62,7 +62,7 @@ const frag = await FileLoader.loadAsync("building_mat.frag");
 const building_material = new THREE.ShaderMaterial({
     uniforms: {
         time: {value: 0.0},
-        resolution: {value: new THREE.Vector2()}
+        resolution: {value: new THREE.Vector2(2048.0, 2048.0)}
     },
     vertexShader: vert,
     fragmentShader: frag,
