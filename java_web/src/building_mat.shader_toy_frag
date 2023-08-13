@@ -34,10 +34,13 @@ void mainImage(out vec4 FragColor, vec2 U){
 
     if (t < ON_TIME)
     {
-        vec2 on = abs(fract(U)-.5) - WINDOW_SIZE/2.;
+        vec2 dark = fract(U)-0.5;
+        vec2 on = abs(dark) - WINDOW_SIZE/2.;
         if ((on.x < 0.0) && (on.y < 0.0))
         {
+            vec2 light_pos = dark + (0.5-rn)*WINDOW_SIZE/2.0;
             color(FragColor, rn);
+            FragColor.xyz += vec3(1.0, 1.0, 1.0)*exp((-pow(light_pos.x,2.0)-pow(light_pos.y,2.0))*50.0);
         }
         else
         {
@@ -45,4 +48,5 @@ void mainImage(out vec4 FragColor, vec2 U){
         }
     }
  }
+
 

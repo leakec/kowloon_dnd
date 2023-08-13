@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MyGui } from './my_gui.js';
+import { fogParsVert, fogVert, fogParsFrag, fogFrag } from "./FogReplace";
 const loader = new GLTFLoader();
 const FileLoader = new THREE.FileLoader();
 
@@ -10,8 +11,24 @@ var renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+
+var params = {
+  fogNearColor: 0xd4d4d4,
+  fogHorizonColor: 0x949292,
+  fogDensity: 0.0025,
+  fogNoiseSpeed: 13.0,
+  fogNoiseFreq: .011,
+  fogNoiseImpact: 1.0
+};
+
+// Add fog
+//var fog = new THREE.FogExp2( 0xffffff, 0.01 );
+//scene.fog = fog;
+
 // Create scene
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(params.fogHorizonColor);
+scene.fog = new THREE.FogExp2(params.fogHorizonColor, params.fogDensity);
 
 // Create camera
 var camera_per = new THREE.PerspectiveCamera(
@@ -72,6 +89,49 @@ const clipped_material = new THREE.MeshPhongMaterial({
     color: 0x1a3736,
     emissive: 0x000000,
     shininess: 62.0,
+});
+
+var clipped_material_shader;
+clipped_material.onBeforeCompile = shader => {
+    shader.vertexShader = shader.vertexShader.replace(
+      `#include <fog_pars_vertex>`,
+      fogParsVert
+    );
+    shader.vertexShader = shader.vertexShader.replace(
+      `#include <fog_vertex>`,
+      fogVert
+    );
+    shader.fragmentShader = shader.fragmentShader.replace(
+      `#include <fog_pars_fragment>`,
+      fogParsFrag
+    );
+    shader.fragmentShader = shader.fragmentShader.replace(
+      `#include <fog_fragment>`,
+      fogFrag
+    );
+
+    const uniforms = ({
+      fogNearColor: { value: new THREE.Color(params.fogNearColor) },
+      fogNoiseFreq: { value: params.fogNoiseFreq },
+      fogNoiseSpeed: { value: params.fogNoiseSpeed },
+      fogNoiseImpact: { value: params.fogNoiseImpact },
+      time: { value: 0 }
+    });
+
+    shader.uniforms = THREE.UniformsUtils.merge([shader.uniforms, uniforms]);
+    clipped_material_shader = shader;
+};
+
+// Add fog
+gui.add_fog_control(scene.fog, clipped_material_shader);
+gui.visual_controls.add(params, "fogNoiseFreq", 0, 0.05).onChange(function() {
+    clipped_material_shader.uniforms.fogNoiseFreq.value = params.fogNoiseFreq;
+});
+gui.visual_controls.add(params, "fogNoiseSpeed", 0.0, 100.0).onChange(function() {
+    clipped_material_shader.uniforms.fogNoiseSpeed.value = params.fogNoiseSpeed;
+});
+gui.visual_controls.add(params, "fogNoiseImpact", 0.0, 1.0).onChange(function() {
+    clipped_material_shader.uniforms.fogNoiseImpact.value = params.fogNoiseImpact;
 });
 
 loader.load(
@@ -148,7 +208,12 @@ var render = function () {
     // Render scene
     requestAnimationFrame(render);
     renderer.render(scene, camera_per);
-    building_material.uniforms.time.value = clock.getElapsedTime();
+    var time = clock.getElapsedTime();
+    building_material.uniforms.time.value = time;
+    if (clipped_material_shader)
+    {
+        clipped_material_shader.uniforms.time.value = time;
+    }
 };
 
 controls.update();
