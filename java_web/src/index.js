@@ -62,11 +62,17 @@ const frag = await FileLoader.loadAsync("building_mat.frag");
 const building_material = new THREE.ShaderMaterial({
     uniforms: {
         time: {value: 0.0},
-        resolution: {value: new THREE.Vector2(2048.0, 2048.0)}
+        resolution: {value: new THREE.Vector2(1.0, 1.0)}
     },
     vertexShader: vert,
     fragmentShader: frag,
 })
+
+const clipped_material = new THREE.MeshPhongMaterial({
+    color: 0x1a3736,
+    emissive: 0x000000,
+    shininess: 62.0,
+});
 
 loader.load(
 	// resource URL
@@ -107,14 +113,15 @@ loader.load(
 
 // Load a version, but add an alpha to the material
 loader.load(
-	'KowloonCityMesh.glb',
+	'KowloonCityScene.glb',
 	function ( gltf ) {
 
 		scene.add( gltf.scene );
 
         gltf.scene.traverse((o) => {       
             if (o.isMesh) {
-                o.material.opacity = 0.1;
+                o.material = clipped_material;
+                o.material.opacity = 0.6;
                 o.material.transparent = true;
             }
         });

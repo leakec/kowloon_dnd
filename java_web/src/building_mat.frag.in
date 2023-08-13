@@ -1,18 +1,20 @@
 // extracted and refactored from skaplun 3D "Megapolis" https://shadertoy.com/view/MlKBWD
 
-#define NUM_COLS    15.0
-#define NUM_ROWS    15.0
+#define NUM_COLS    100.0
+#define NUM_ROWS    150.0
 #define PERCENT_ON  0.7
-#define TIME_MULT   0.02
+#define TIME_MULT   0.01
 
-#define WINDOW_SIZE 0.5
+#define WINDOW_SIZE 0.4
 #define ON_TIME PERCENT_ON
+#define BASE_COLOR vec4(0.1, 0.1, 0.1, 1.0)
 
 #define rnd(p) fract(sin(dot(p, vec2(12.9898,78.233))) * 43758.5453123)
 
 uniform float time;
 uniform vec2 resolution;
 varying vec2 vUv;
+varying vec3 v_normal;
 
 #include <clipping_planes_pars_fragment>
 
@@ -30,12 +32,21 @@ void color( out vec4 c, float rn)
 void main(){
     #include <clipping_planes_fragment>
     
-    vec2 dark = vec2(NUM_ROWS/resolution.x, NUM_COLS/resolution.y);
+    gl_FragColor = BASE_COLOR;
+    if (abs(dot(v_normal, vec3(0.0, 1.0, 0.0))) > 0.9)
+    {
+        // Early out if we are on the rooftop or ground
+        return;
+    }
+
+    vec2 dark = vec2(NUM_COLS/resolution.x, NUM_ROWS/resolution.y);
     vec2 U = vUv * dark;
     float rn = rnd(ceil(U));
     float time_slide = time + rn*NUM_COLS*NUM_ROWS;
     
     float t = fract(time_slide * TIME_MULT);
+
+    //gl_FragColor = vec4(fract(U.x), fract(U.y), 0.0, 1.0);
 
     if (t < ON_TIME)
     {
@@ -44,13 +55,5 @@ void main(){
         {
             color(gl_FragColor, rn);
         }
-        else
-        {
-            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
-        }
-    }
-    else
-    {
-        gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
     }
  }

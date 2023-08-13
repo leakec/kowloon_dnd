@@ -1,5 +1,7 @@
 uniform float time;
 varying vec2 vUv;
+varying vec3 v_normal;
+
 #include <clipping_planes_pars_vertex>
 
 // Clipping planes
@@ -9,6 +11,7 @@ void main() {
     #include <begin_vertex>
 
     vUv = uv;
+    v_normal = normal;
 
     #include <project_vertex>
     #include <clipping_planes_vertex>

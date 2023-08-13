@@ -74,7 +74,7 @@ export class MyGui extends GUI {
 
     add_transparency_control(objs: THREE.Group)
     {
-        this.transparency_slider = this.plane_controls.add({transparency: 0.1}, "transparency", 0.0, 1.0);
+        this.transparency_slider = this.plane_controls.add({transparency: 0.6}, "transparency", 0.0, 1.0);
         this.transparent_objs = objs;
 
         var func = this.update_transparency_slider.bind(this);
