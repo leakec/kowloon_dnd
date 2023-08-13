@@ -3,7 +3,7 @@
 #define NUM_COLS    100.0
 #define NUM_ROWS    150.0
 #define PERCENT_ON  0.7
-#define TIME_MULT   0.01
+#define TIME_MULT   0.005
 
 #define WINDOW_SIZE 0.4
 #define ON_TIME PERCENT_ON
