@@ -29,6 +29,10 @@ jobs:
               run: (cd java_web; make dist/main.js)
             - name: Copy files
               run: |
+               unlink java_web/dist/building_mat.frag
+               unlink java_web/dist/building_mat.vert
+               unlink java_web/dist/KowloonCityMesh.glb
+               unlink java_web/dist/KowloonCityScene.glb
                cp java_web/src/building_mat.frag java_web/dist
                cp java_web/src/building_mat.vert java_web/dist
                cp data/meshes/KowloonCityMesh.glb java_web/dist
