@@ -25,14 +25,14 @@ jobs:
               uses: actions/checkout@v3
               with:
                 lfs: true
+            - name: Build
+              run: (cd java_web; make dist/main.js)
             - name: Copy files
               run: |
                cp java_web/src/building_mat.frag java_web/dist
                cp java_web/src/building_mat.vert java_web/dist
                cp data/meshes/KowloonCityMesh.glb java_web/dist
                cp data/meshes/KowloonCityScene.glb java_web/dist
-            - name: Build
-              run: cd java_web; make dist/main.js
             - name: Setup Pages
               uses: actions/configure-pages@v2
             - name: Build with Jekyll
