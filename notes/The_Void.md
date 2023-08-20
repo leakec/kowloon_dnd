@@ -23,4 +23,10 @@ I've always been warned against heading into The Void. But ... it's so tempting 
 ## Extras 
 The sky is a blaze of golden orange as the sun sets behind the mountains that separate The Void and the New Territories; the natural, blooming light of the sun dances and mingles with various neon purples and cyans coming from The Void's city lights. The alleys and small spaces between skyscrapers are eerily quiet today as the majority of The Void's residents begin to emerge from their homes. 
 
+# SD
+
+## Alleyway
+alleyway, dense urban city, buildings nearly touching, cyberpunk, (fog:1.1), (neon lights:1.1), many lights  
+Negative prompt: canvas frame, (high contrast:1.2), (over saturated:1.2), (glossy:1.1), cartoon, 3d, ((disfigured)), ((bad art)), ((b&w)), blurry, ((bad anatomy)), (((bad proportions))), ((extra limbs)), cloned face, (((disfigured))), extra limbs, (bad anatomy), gross proportions, (malformed limbs), ((missing arms)), ((missing legs)), (((extra arms))), (((extra legs))), mutated hands, (fused fingers), (too many fingers), (((long neck))), Photoshop, video game, ugly, tiling, poorly drawn hands, 3d render  
+Steps: 20, Sampler: DPM++ 2M SDE, CFG scale: 7, Seed: 3997557604, Size: 512x512, Model hash: bd20f62d92, Model: faetality_v10, Denoising strength: 0.7, Hires upscale: 2, Hires upscaler: Latent, Version: v1.5.1
 
