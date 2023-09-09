@@ -1,9 +1,10 @@
 ---
-tag: place, todo
+tag: place
 ---
 * Pronounced loo·si·fr·uhn
 * Initial place where all the characters meet.
 * Club with classic dark, cyberpunk music.
+* Located east the pink light in the building with more horizontal space.
 * Players meet the [[Ringleader]] here, where get their [first task](First_task).
 * [[Shelly]] is a bartender here.
 * The layout of the club contains:

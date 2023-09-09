@@ -1,0 +1,5 @@
+* One idea here is a silent communication puzzle. The characters each have a piece of the puzzle, but they cannot speak directly. The GM can whisper the pieces to each of the players, then they have to communicate non-verbally. They can describe the actions of their player or mime them out, whatever they are comfortable with.
+* Portal puzzle. Door disappears and the room has a few portals. Each portal they can reach has a button that changes the location of some of the other portals. Clues in the room help them get out. 
+* The play. This one could take place mid-battle with Shun. The characters are cast somewhere else for what is only a moment in real time. While they are there the only way out is to perform a play. The play is based on clues or pages scattered around the stage. Could be a cool way to force some RP and give some lore at the same time and also do the puzzle.
+* Another way to do the above would be a ghost in a room. The key doesn't appear until the ghost can move onto the afterlife. Helping the ghost will require their backstory, which could give some lore. Maybe not as good as the play since it doesn't have RP.
+

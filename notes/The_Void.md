@@ -4,10 +4,7 @@ tag: place, todo
 * This is the name of the city.
 
 # TODO
-* Review the introduction about the city.
 * Figure out general areas that correspond to the 5 major lights of the city.
-* Where is [[Luciferin]] located? 
-* Where is the [First task](First_task) located?
 
 # Introduction
 Journal entry #41: Notes on The Void
