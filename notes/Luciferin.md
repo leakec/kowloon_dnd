@@ -12,6 +12,8 @@ tag: place
 	* Dancefloor.
 	* Quiet area in a corner away from the dancefloor and bar. This area has tables where people can eat.
 * The darkness and noise make it easy to find solitude and anonymity here.
+* [[Brick]] is in the club near the bar.
+* [Galan Ianfiel](/Galan_Ianfiel.md) is in the club in the quiet area.
 
 # SD
 crowd, (dancing:1.2), night club, (cyberpunk:1.2), leather, cyborg, indoors  
