@@ -16,8 +16,9 @@ tags: people
 ## Captain Reginald B3
 * Shopkeeper at [Verslun B3](Verslun#verslun-b3).
 * Very excitable and complimentary towards his customers.
-* Think a really happy, outgoing, eccentric Mr. Burns (from the Simpsons).
+* Think an excited DM from the adventure zone. Make it breathy and a bit wispy. 
 * This may be a good time to hint at the [legend of the four](Legend_of_the_four). This should be subtle. Maybe he just says something like "Four of you ... and you just came here? Four ... Hmm. How very curious indeed."
+* 
 ### SD
 Tall eccentric male, well dressed, (cyborg body parts:1.3), full body, smiling, shopkeeper, well lit shop  
 Negative prompt: canvas frame, (over saturated:1.2), (glossy:1.1), cartoon, 3d, ((disfigured)), ((bad art)), ((b&w)), blurry, ((bad anatomy)), (((bad proportions))), ((extra limbs)), cloned face, (((disfigured))), extra limbs, (bad anatomy), gross proportions, (malformed limbs), ((missing arms)), ((missing legs)), (((extra arms))), (((extra legs))), mutated hands, (fused fingers), (too many fingers), (((long neck))), Photoshop, ugly, tiling, poorly drawn hands, 3d render  

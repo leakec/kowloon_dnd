@@ -5,3 +5,4 @@
 * They have not decided on a price yet. 
 * They have not met Galan Ianfiel.
 
+

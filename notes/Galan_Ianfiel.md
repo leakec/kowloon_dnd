@@ -6,6 +6,7 @@ tags: people
 * Galan is an orange haired elf. 
 * He is an archer.
 * He will not reveal much else about himself during the first encounter with the players, but purposefully act a bit flirty and mysterious. 
+* Maybe use a Boston accent?
 
 # SD
 Male elf, orange hair in a bun, archer, full body, strong, neon blue and purple lights, standing in cyberpunk night club  

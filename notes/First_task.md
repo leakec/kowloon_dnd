@@ -14,6 +14,7 @@
 * The players will need to battle [[Shun]] and her minions. 
 * Based on [this](https://www.dndbeyond.com/posts/194-a-new-dms-guide-for-building-combat-encounters) I'm thinking [[Shun]] should be 3/4 the characters challenge rating and she should have two minions that are 1/2 the characters challenge rating. The players are level 5 so I'm thinking Shun as level 4 and two minions at level 2 would be good.
 * It is okay to go a little hard during battle and bring [[Brick]] or [Galan Ianfiel](Galan_Ianfiel) in as needed.
+* The two minions should be [shadow drakes](https://2e.aonprd.com/Monsters.aspx?ID=640).
 
 ## Mystery
 * Tied to the [legend of the four](Legend_of_the_four).
@@ -21,4 +22,5 @@
 * Somehow [[Shun]] should get wind of this, either as a final question before death or in travel back to the [[Ringleader]]. Something like how did you get in here and what did the puzzle say on the way in? She should be shocked by this, then laughing that [The Void](The_Void) is fucked.
 
 ## To do
+* Tokens for the two shadow drakes.
 * Need to decide on classes for the minions and Shun.

@@ -22,6 +22,6 @@ Steps: 40, Sampler: DPM++ 2M SDE Karras, CFG scale: 12, Seed: 3622516546, Face r
 
 Postprocess upscale by: 2, Postprocess upscaler: SwinIR_4x
 
-  * Try this [map generator](https://civitai.com/models/5012/dnd-map-generator)
+
 
 
