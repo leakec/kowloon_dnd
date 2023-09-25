@@ -22,5 +22,6 @@
 * Somehow [[Shun]] should get wind of this, either as a final question before death or in travel back to the [[Ringleader]]. Something like how did you get in here and what did the puzzle say on the way in? She should be shocked by this, then laughing that [The Void](The_Void) is fucked.
 
 ## To do
-* Tokens for the two shadow drakes.
-* Need to decide on classes for the minions and Shun.
+
+* Map for the play
+* Handouts for the play

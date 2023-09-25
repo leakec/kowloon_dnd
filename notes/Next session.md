@@ -14,6 +14,5 @@ tags:
 	* Galan should show up at one point. Fires an arrow. Use this to balance encounter. Need to make it ambiguous who it should hit. Players should not know whose side he is on.
 # Todo
 * Need a map for the puzzle.
-* Need tokens for the inp encounter.
-* Need tokens for Shun's minions.
+* Need handouts for the puzzle
 * If time token for Galan.
