@@ -1,6 +1,5 @@
 ---
-tags:
-  - todo
+tags: []
 ---
 
 * The first task involves bringing a known mob boss, [[Shun]] back to the Ringleader.
@@ -18,9 +17,6 @@ tags:
 ## Page 1
 * 4 individuals find themselves in the same city.
 * The city functions, but finds itself on the brink of chaos each day.
-
-The Legend of the Four: Act 1/3
-Despite different paths in life, four individuals find themselves housed within the same city. By mere happenstance, the four meet one another. A shared goal causes them to join forces.
 
 The Legend of the Four: Act 1/3
 In the tapestry of destiny, four disparate souls, each treading unique paths through the labyrinthine corridors of life, converge upon a fateful intersection. A celestial hand, unseen and unknowable, orchestrates their chance encounter within the shadowed embrace of a city veiled in enigma.
@@ -71,9 +67,4 @@ The four, who had once aspired to be the city's salvation, have become unwitting
 * Tied to the [legend of the four](Legend_of_the_four).
 * The puzzle should give some hint that the four have arrived.
 * Somehow [[Shun]] should get wind of this, either as a final question before death or in travel back to the [[Ringleader]]. Something like how did you get in here and what did the puzzle say on the way in? She should be shocked by this, then laughing that [The Void](The_Void) is fucked.
-
-## To do
-
-* Create the sheets
-* Puzzle for the last sheets
 

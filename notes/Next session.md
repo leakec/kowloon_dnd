@@ -1,6 +1,5 @@
 ---
-tags:
-  - todo
+tags: []
 ---
 * Meet Galan at the club or just outside.
 	* Has a flirty encounter with one of the players. 
@@ -12,5 +11,3 @@ tags:
 * Shop at [[Verslun]].
 * Do the first task 
 	* Galan should show up at one point. Fires an arrow. Use this to balance encounter. Need to make it ambiguous who it should hit. Players should not know whose side he is on.
-# Todo
-* Need handouts for the puzzle
