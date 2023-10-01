@@ -1,3 +1,8 @@
+---
+tags:
+  - todo
+---
+
 * The first task involves bringing a known mob boss, [[Shun]] back to the Ringleader.
 	* The award is higher if she is brought alive, but the Ringleader is okay with her being dead as well. Reward starts at 400 GP alive and 250 GP dead. However, players may negotiate this, and bring up the total to 500 GP alive and 300 GP dead.
 * If players are good, then harp on the fact that [[Shun]] is evil. She is brutal and those who live in the buildings she controls must pay money for her "protection."
