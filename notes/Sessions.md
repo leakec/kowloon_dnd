@@ -12,4 +12,9 @@
 * Shop at Varslune. (Haley will give what they bought).
 * Next up is talking to the Ringleader.
 
+# Temp notes while traveling
+* German-accent character who lives in or runs a place or section of the town called Winterhilfe
+* I love rococo as a design descriptor.
+* 
+
 
