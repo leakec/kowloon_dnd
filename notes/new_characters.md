@@ -5,7 +5,7 @@
 * Man splainer
 
 ## Mister Glitter
-* Also works in the buisness of glitter.
+* Also works in the business of glitter.
 * One of the biggest names in business
 
 ## Dainty Malone

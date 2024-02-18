@@ -17,7 +17,7 @@ tags: people
 * Shopkeeper at [Verslun B3](Verslun#verslun-b3).
 * Very excitable and complimentary towards his customers.
 * Think an excited DM from the adventure zone. Make it breathy and a bit wispy. 
-* This may be a good time to hint at the [legend of the four](Legend_of_the_four). This should be subtle. Maybe he just says something like "Four of you ... and you just came here? Four ... Hmm. How very curious indeed."
+* This may be a good time to hint at the [legend of the five](Legend_of_the_five.md). This should be subtle. Maybe he just says something like "Four of you ... and you just came here? Four ... Hmm. How very curious indeed."
 * 
 ### SD
 Tall eccentric male, well dressed, (cyborg body parts:1.3), full body, smiling, shopkeeper, well lit shop  

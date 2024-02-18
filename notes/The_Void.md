@@ -24,7 +24,7 @@ As you might imagine, The Void is criticized more often than praised by the citi
 I've always been warned against heading into The Void. But ... it's so tempting ...
 
 ## Extras 
-The sky is a blaze of golden orange as the sun sets behind the mountains that separate The Void and the New Territories; the natural, blooming light of the sun dances and mingles with various neon purples and cyans coming from The Void's city lights. The alleys and small spaces between skyscrapers are eerily quiet today as the majority of The Void's residents begin to emerge from their homes. A few hours later, at a local hot spot called Luciferin, we find four individuals.
+The sky is a blaze of golden orange as the sun sets behind the mountains that separate The Void and the New Territories; the natural, blooming light of the sun dances and mingles with various neon purples and cyans coming from The Void's city lights. The alleys and small spaces between skyscrapers are eerily quiet today as the majority of The Void's residents begin to emerge from their homes. A few hours later, at a local hot spot called Luciferin, we find five individuals.
 
 # SD
 
