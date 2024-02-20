@@ -1,7 +1,7 @@
 ---
 tags: []
 ---
-
+ 
 * The first task involves bringing a known mob boss, [[Shun]] back to the Ringleader.
 	* The award is higher if she is brought alive, but the Ringleader is okay with her being dead as well. Reward starts at 400 GP alive and 250 GP dead. However, players may negotiate this, and bring up the total to 500 GP alive and 300 GP dead.
 * If players are good, then harp on the fact that [[Shun]] is evil. She is brutal and those who live in the buildings she controls must pay money for her "protection."
@@ -14,6 +14,7 @@ tags: []
 * I think it makes sense as a way either to get to [[Shun]] or a place [[Shun]] somehow sends them mid-battle (the latter option is pretty unique and interesting). 
 * Use this to force some RP and give some lore at the same time.
 * Some of the sheets should be hidden behind at least one puzzle. Maybe do the coin puzzle? 9 coins and you need to find the fake one.
+	* You have 2 weighings. The odd coin is heaver than the rest.
 ## Page 1
 * 4 individuals find themselves in the same city.
 * The city functions, but finds itself on the brink of chaos each day.
