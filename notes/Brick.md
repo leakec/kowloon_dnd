@@ -7,6 +7,9 @@ tag: people
 * Level 4 or 5 barbarian
 * Seems hesitant to join them but then does?
   * Depending on the interaction, this could be at first, or maybe he just shows up later if they are in need of help.
+* He does a bit of fighting, which is how he met [Shelly](shelly).
+* He likes [Shelly](shelly) a bit now, and that can grow depending on how the PCs interact with him.
+* He also likes poetry.
 ## SD
 Tall, barbarian, iron worker, (steel mill:1.2), (fully clothed:1.2), solemn expression, full body  
 Negative prompt: canvas frame, (over saturated:1.2), (glossy:1.1), cartoon, 3d, ((disfigured)), ((bad art)), ((b&w)), blurry, ((bad anatomy)), (((bad proportions))), ((extra limbs)), cloned face, (((disfigured))), extra limbs, (bad anatomy), gross proportions, (malformed limbs), ((missing arms)), ((missing legs)), (((extra arms))), (((extra legs))), mutated hands, (fused fingers), (too many fingers), (((long neck))), Photoshop, ugly, tiling, poorly drawn hands, 3d render  

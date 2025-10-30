@@ -7,7 +7,10 @@ tags: people
 * Will help introduce the party to the [[Ringleader]] if need be.
   * Something along the lines of money if they are looking for work.
   * Could also be a great person to get to know, since he knows the whole city.
-
+* Shelly is the bartender and works the weekend shift. Her days are Firday, Saturday, and then 2-4 of the weekedays.
+* The bartenders at [Luciferin](luciferin) are the last resort bouncers. The ones who work the weekend are the toughest.
+* She is a druid of higher level than the players (let's say 6 or 7). If 6 she can be a medium sized creature, if 7, can be large. Her favorite creature to use is a cat (specifically a black panther).
+* 
 ## Handout
 
 ### SD prompt
