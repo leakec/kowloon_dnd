@@ -4,6 +4,7 @@ tags: people
 * Shun is a mob boss.
 * Her capture or defeat is the goal of the [First Task](First_task).
 * Stories given about her are she is brutal. She will often choose violence and make examples of people who do not pay their taxes to her for "protection."
+* Her character sheet is on Roll 20, don't use what is on GitHub.
 
 ## SD
 Evil woman, sly smile, arms crossed, (leaning on a wall:1.1),( blood pools on the floor:1.4), blood stains on the wall, cyberpunk, basement, (men work in the background:1.2)  

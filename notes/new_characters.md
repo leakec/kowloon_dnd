@@ -6,7 +6,7 @@
 
 ## Mister Glitter
 * Also works in the business of glitter.
-* One of the biggest names in business
+* One of the biggest names in the business
 
 ## Dainty Malone
 

@@ -7,6 +7,11 @@ tags: people
 * He is an archer.
 * He will not reveal much else about himself during the first encounter with the players, but purposefully act a bit flirty and mysterious. 
 * Maybe use a Boston accent?
+## Legend of the 5 arrow
+* He is sent by the Ringleader to kill Shun
+* Ian's stated reason if questioned is to make the reward less
+	* Real reason is to avoid Legend of the 5 Knowledge. Instructed to kill if she says anything about it.
+* He can be pressed for this. DC 25 (30?) intimidation. Persuasion can also be used, but characters need to justify this.
 
 # SD
 Male elf, orange hair in a bun, archer, full body, strong, neon blue and purple lights, standing in cyberpunk night club  
